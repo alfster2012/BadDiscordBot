@@ -5,4 +5,4 @@ Please create the file **settings.json** and add the following to it
 {
     "token" : "[Your Bot Token]",
     "prefix" : "[Your Bot Prefix" 
-}```
+}
