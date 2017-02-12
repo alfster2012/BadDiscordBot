@@ -9,15 +9,45 @@ client.on('ready', () => {
 client.on('message', message => {
   if (message.content === `${settings.prefix}ping`) {
     message.reply('pong');
-  }
+  }else 
   
-  if (message.content.startsWith`${settings.prefix}eval`) && message.author.id === "135695463130071040") {
+  if (message.content.startsWith`${settings.prefix}eval` && message.author.id === `${settings.botOwnerID}`) {
     message.reply(eval(message.content.split(" ").slice(1).join(" ")));
-  }
+  }else
 
   if (message.content === `${settings.prefix}avatar`) {
     message.reply(message.author.avatarURL);
+  }else
+  if (message.content === `${settings.prefix}help`) {
+  message.channel.sendMessage("", {embed: {
+  color: 3447003,
+  author: {
+    name: client.user.username,
+    icon_url: client.user.avatarURL
+  },
+  title: 'Help',
+  url: 'https://github.com/alfster2012/BadDiscordBot',
+  description: 'This is the help dialouge',
+  fields: [
+    {
+      name: '[Perfix]avatar',
+      value: 'Displays a users avatar'
+    },
+    {
+      name: '[Perfix]ping',
+      value: 'Pong'
+    },
+    {
+      name: '[Prefix]help',
+      value: 'Your looking at it right now.'
+    }
+  ],
+  timestamp: new Date(),
+  footer: {
+    icon_url: client.user.avatarURL,
+    text: '© alfster2012'
   }
+}})};
 });
 
 
