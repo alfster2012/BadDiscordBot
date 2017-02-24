@@ -11,7 +11,7 @@ client.on('message', message => {
     message.reply('pong');
   } else
 
-  if (message.content.startsWith(`${settings.prefix}eval` && message.author.id === `${settings.botOwnerID}`)) {
+  if (message.content.startsWith(`${settings.prefix}eval` && message.author.id === settings.botOwnerID)) {
     message.reply(eval(message.content.split(" ").slice(1).join(" ")));
   } else
 
@@ -47,7 +47,7 @@ client.on('message', message => {
         timestamp: new Date(),
         footer: {
           icon_url: client.user.avatarURL,
-          text: '© alfster2012',
+          text: '© ~~alfster2012~~ ItsJordan',
           url: 'https://alfster2012.questionable.photography/'
         }
       }
